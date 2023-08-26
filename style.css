@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3cb371;
+  font-family: arial;
+}
+
+section {
+  max-width: 130vh;
+  min-width: 130vh;
+  margin: 10px auto;
+}
+
+.grid {
+  display: grid;
+  gap: 25px;
+  margin: 25px auto;
+  grid-template-columns: 70% 30%;
+  grid-auto-rows: 292px;
+}
+
+.item-1, .item-4 {
+  height: 100%;
+  grid-row: span 3;
+}
+
+.item-4 {
+  grid-row: span 3;
+}
+
+.item-2 {
+  grid-row: span 2;
+}
+
+.item-1, .item-4 {
+  grid-column: 1;
+}
+
+.item-2, .item-3, .item-5, .item-6, .item-7 {
+  grid-column: 2;
+}
+
+.grid > div {
+  background: white;
+}
+
+/* Item-1 Syles */
+.main-box {
+  margin: auto;
+}
+
+.main-box > img {
+  width: 100%;
+  height: 80%;
+}
+
+.main-box-container {
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: justify;
+}
+
+.main-box-container div {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-box-container p {
+  margin: 7px 0 7px 0;
+  color: #666697;
+}
+
+/* Item-2 Styles */
+.box > img {
+  width: 100%;
+  height: 40%;
+}
+
+.box-container { 
+  padding: 20px;
+  text-align: justify;
+}
+
+.box-container div {
+  width: 100%;
+  height: 200px;
+  font-size: 15px;
+  margin: 15px auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.box-container p {
+  color: #666697;
+  margin: 7px 0 7px 0;
+}
+
+.item-3 .box-container > div,
+.item-5 .box-container > div,
+.item-6 .box-container > div,
+.item-7 .box-container > div {
+  height: 168px;
+  font-size: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 1300px) {
+
+  body {
+    background: red;
+  }
+
+  section {
+    max-width: 700px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  section div {
+    margin-bottom: 15px;
+  }
+
+  .item-1, .item-4 {
+    width: 100%;
+    order: -1;
+  }
+
+}
